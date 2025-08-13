@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div id="section-1-date-training">
+            <header>
+                <h1>Tag und Training auswählen</h1>
+            </header>
+            <form id="form-date-training">
+                <label for="workout-date">Datum:</label>
+                <input type="date" id="workout-date" required>
+    
+                <label for="workout-type">Training auswählen:</label>
+                <select id="workout-type" required>
+                    <option value="" disabled selected>Wähle ein Training</option>
+                    <option value="Upper (Strength Focus)">Upper (Strength Focus)</option>
+                    <option value="Lower (Strength Focus)">Lower (Strength Focus)</option>
+                    <option value="Pull (Hypertrophy Focus)">Pull (Hypertrophy Focus)</option>
+                    <option value="Push (Hypertrophy Focus)">Push (Hypertrophy Focus)</option>
+                    <option value="Legs (Hypertrophy Focus)">Legs (Hypertrophy Focus)</option>
+                </select>
+
+                <button type="submit">Weiter</button>
+            </form>
+            <button id="show-history-btn" class="secondary-btn">Trainingsverlauf anzeigen</button>
+        </div>
+
+        <div id="section-2-week" style="display: none;">
+            <header>
+                <h1>Woche auswählen</h1>
+                <p id="week-header-info"></p>
+            </header>
+            <form id="form-week">
+                <label for="workout-week">Woche auswählen:</label>
+                <select id="workout-week" required>
+                    <option value="" disabled selected>Wähle eine Woche</option>
+                    <option value="Woche 1">Woche 1</option>
+                    <option value="Woche 2">Woche 2</option>
+                    <option value="Woche 3">Woche 3</option>
+                    <option value="Woche 4">Woche 4</option>
+                    <option value="Woche 5">Woche 5</option>
+                    <option value="Woche 6">Woche 6</option>
+                    <option value="Woche 7">Woche 7</option>
+                    <option value="Woche 8">Woche 8</option>
+                    <option value="Woche 9">Woche 9</option>
+                    <option value="Woche 10">Woche 10</option>
+                    <option value="Woche 11">Woche 11</option>
+                    <option value="Woche 12">Woche 12</option>
+                </select>
+
+                <button type="submit">Weiter</button>
+            </form>
+        </div>
+
+        <div id="section-3-exercises" style="display: none;">
+            <header>
+                <h1 id="exercise-header-info"></h1>
+                <p>Trage deine Übungen ein:</p>
+            </header>
+            
+            <form id="form-exercises">
+                </form>
+            
+            <div class="button-group">
+                <button id="back-to-week-btn" class="secondary-btn">Zurück</button>
+                <button id="finish-workout-btn" class="btn btn-primary mt-3">Training beenden und speichern</button>
+            </div>
+        </div>
+
+        <div id="history-section" style="display: none;">
+            <header>
+                <h1>Trainingsverlauf</h1>
+            </header>
+            <div id="history-list">
+                </div>
+            <button id="back-to-main-btn" class="secondary-btn">Zurück</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
